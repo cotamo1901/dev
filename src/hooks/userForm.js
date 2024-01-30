@@ -11,6 +11,7 @@ export const userForm = (initialForm = {}) => {
   };
 
   return {
+    ...form,
     form,
     handleInputChange,
   };

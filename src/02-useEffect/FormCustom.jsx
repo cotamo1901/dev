@@ -2,12 +2,12 @@ import { Message } from "./Message";
 import { userForm } from "../hooks/userForm";
 
 export const FormCustom = () => {
-  const { form, handleInputChange } = userForm({
+  const { form, handleInputChange,onResetForm } = userForm({
     username: "",
     email: "",
     password: "",
   });
-  
+
   const { username, email, password } = form;
   return (
     <>
@@ -37,6 +37,8 @@ export const FormCustom = () => {
         onChange={handleInputChange}
         value={password}
       />
+
+      <button onClick={onResetForm} className="btn btn-primary mt-2">Reset</button>
       {/* value={email} */}
       {username === "cotamo" && <Message />}
     </>
